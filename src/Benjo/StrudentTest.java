@@ -26,6 +26,27 @@ public class StrudentTest {
 		System.out.println("Sortirano");
 		ispisiNiz(brojStudenata);
 		
+		Student s2 =new Student();
+		s2.ime = "Edib";
+		s2.prezime="Munja";
+		s2.brIndexa =4;
+		ispis(s2);
+		
+		Student s3 =new Student();
+		s3.ime = "Nedzad";
+		s3.prezime="Drug od Munje";
+		s3.brIndexa =1;
+		ispis(s3);
+		
+		zamijeniStudente(s2,s3);
+		
+	}
+
+	private static void zamijeniStudente(Student s2, Student s3) {
+		s3.ime = s2.ime;
+		s3.prezime = s2.prezime;
+		s3.brIndexa = s2.brIndexa;
+		
 	}
 
 	public static void bubbleSortStudenti(Student[] brojStudenata) {
@@ -41,8 +62,9 @@ public class StrudentTest {
 		}
 
 	}
+	
 
-	public static void ispisiNiz(Student[] niz) {
+	public static void ispisiNiz ( Student[] niz) {
 		for (int i = 0; i < niz.length; i++) {
 			ispis(niz[i]);
 			}
